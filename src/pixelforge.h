@@ -745,6 +745,19 @@ pfOrtho(PFfloat left, PFfloat right,
         PFfloat bottom, PFfloat top,
         PFfloat znear, PFfloat zfar);
 
+/**
+ * @brief Sets up a perspective projection matrix.
+ *
+ * @warning This function needs a context to be defined.
+ *
+ * @param vertangle   Coordinate for the left vertical clipping plane.
+ * @param aspectratio Coordinate for the right vertical clipping plane.
+ * @param znear  Distance to the near depth clipping plane.
+ * @param zfar   Distance to the far depth clipping plane.
+ */
+PF_API void
+pfPerspective(PFfloat vertangle, PFfloat aspectratio,
+              PFfloat znear, PFfloat zfar);
 
 /* Render configuration API functions */
 

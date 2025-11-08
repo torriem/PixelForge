@@ -38,6 +38,7 @@ if(PF_BUILD_SHARED)
 else()
     add_library(${PROJECT_NAME} STATIC ${SRCS} ${HDRS})
     target_compile_definitions(${PROJECT_NAME} PUBLIC PF_BUILD_STATIC)
+    target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 endif()
 
 # Check for SIMD support

@@ -24,7 +24,9 @@
 
 #include "../pfm.h"
 
+#if !defined(__aarch64__)
 #include <immintrin.h>
+#endif
 #include <float.h>
 
 #if defined(__AVX2__)

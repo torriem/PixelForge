@@ -38,7 +38,7 @@ PF_CTX_DECL PFIctx *G_currentCtx = NULL;
 
 /* Some static helper functions */
 
-static void pfiResetVertexBufferForNextElement()
+static void pfiResetVertexBufferForNextElement(void)
 {
     switch (G_currentCtx->currentDrawMode) {
         case PF_TRIANGLE_FAN:
@@ -547,6 +547,12 @@ void pfOrtho(PFfloat left, PFfloat right, PFfloat bottom, PFfloat top, PFfloat z
     pfmMat4Mul(*G_currentCtx->currentMatrix, *G_currentCtx->currentMatrix, ortho);
 }
 
+void pfPerspective(PFfloat vertangle, PFfloat aspectratio, PFfloat znear, PFfloat zfar)
+{
+    PFMmat4 perspective;
+    pfmMat4Perspective(perspective, vertangle, aspectratio, znear, zfar);
+    pfmMat4Mul(*G_currentCtx->currentMatrix, *G_currentCtx->currentMatrix, perspective);
+}
 
 /* Render configuration API functions */
 
