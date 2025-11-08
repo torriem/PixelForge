@@ -1,6 +1,6 @@
 # ⚠️ DON'T USE
 
-This repository is no longer maintained and contains issues that will never be fixed.
+This repository is a fork of a repository that is no longer maintained and contains issues that will never be fixed. This fork is intended for a very limited, experimental use case in QtAgOpenGPS
 
 ![PixelForge](examples/resources/images/PixelForge.png)
 
