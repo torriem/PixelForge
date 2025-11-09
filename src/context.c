@@ -683,7 +683,7 @@ void pfBindTexture(PFtexture texture)
     G_currentCtx->currentTexture = texture;
 }
 
-void pfClear(PFclearflag flag)
+void pfClear(int flag)
 {
     // If no flag is set, return early (nothing to clear)
     if (!flag) return;

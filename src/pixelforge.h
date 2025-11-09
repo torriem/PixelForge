@@ -909,7 +909,7 @@ pfBindTexture(PFtexture texture);
  * @param flag Bitwise OR of values specifying which buffers to clear (e.g., PF_COLOR_BUFFER_BIT, PF_DEPTH_BUFFER_BIT).
  */
 PF_API void
-pfClear(PFclearflag flag);
+pfClear(int flag);
 
 /**
  * @brief Sets the clear depth value for the depth buffer of the current framebuffer.
